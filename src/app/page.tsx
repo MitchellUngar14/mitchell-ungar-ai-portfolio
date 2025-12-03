@@ -41,8 +41,8 @@ export default function Home() {
       {/* Footer */}
       <footer className="text-center py-10 border-t border-gray-800">
         <div className="flex justify-center space-x-4 mb-4">
-          <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">GitHub</a>
-          <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">LinkedIn</a>
+          <a href="https://github.com/MitchellUngar14" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">GitHub</a>
+          <a href="https://www.linkedin.com/in/mitchell-ungar-552879168/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white">LinkedIn</a>
         </div>
         <p className="text-gray-500">© 2024 Mitchell Ungar</p>
       </footer>
