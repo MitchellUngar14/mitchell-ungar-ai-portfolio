@@ -9,7 +9,7 @@ export default function Home() {
           <h1 className="text-5xl font-bold">Mitchell Ungar</h1>
           <p className="text-2xl mt-2">AI Portfolio</p>
           <p className="mt-4 max-w-2xl mx-auto">
-            AI Developer & Innovator, passionate about building intelligent systems that solve real-world problems.
+            AI Developer, Innovator & Architect, passionate about building intelligent systems that solve real-world problems.
           </p>
         </section>
 
@@ -21,8 +21,8 @@ export default function Home() {
               title="The Tribunal"
               description="An AI-powered application for collaborative decision-making."
               techStack={['Next.js', 'Vercel', 'OpenAI API']}
-              liveSiteUrl="#"
-              sourceCodeUrl="#"
+              liveSiteUrl="https://the-tribunal-app.vercel.app/"
+              sourceCodeUrl="https://github.com/MitchellUngar14/the-tribunal-app"
             />
             <ProjectCard
               title="Project In Progress"
