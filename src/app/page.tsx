@@ -45,9 +45,11 @@ export default function Home() {
                 sourceCodeUrl="https://github.com/MitchellUngar14/the-tribunal-app"
               />
               <ProjectCard
-                title="Project In Progress"
-                description="A future AI project under development."
-                techStack={['Coming Soon']}
+                title="Apogee Insurance"
+                description="An insurance quoting and customer service platform built with modern web technologies."
+                techStack={['Next.js', 'React', 'Drizzle ORM', 'PostgreSQL', 'Tailwind CSS']}
+                liveSiteUrl="https://apogee-insurance.vercel.app/"
+                sourceCodeUrl="https://github.com/MitchellUngar14/apogee-insurance"
               />
               <ProjectCard
                 title="Future AI Project"
