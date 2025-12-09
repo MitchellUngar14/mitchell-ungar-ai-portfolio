@@ -52,9 +52,11 @@ export default function Home() {
                 sourceCodeUrl="https://github.com/MitchellUngar14/apogee-insurance"
               />
               <ProjectCard
-                title="Future AI Project"
-                description="A future AI project in the planning stages."
-                techStack={['Coming Soon']}
+                title="Bad Advice For Free"
+                description="A Q&A platform with a tiered role system - ask questions, submit answers, and moderate content."
+                techStack={['Next.js', 'React', 'Prisma', 'PostgreSQL', 'Tailwind CSS']}
+                liveSiteUrl="https://bad-advice-for-free.vercel.app/"
+                sourceCodeUrl="https://github.com/MitchellUngar14/BadAdviceForFree"
               />
             </div>
           </section>
