@@ -2,7 +2,7 @@ import React from 'react';
 
 interface ProjectCardProps {
   title: string;
-  description: string;
+  description: string | React.ReactNode;
   techStack: string[];
   liveSiteUrl?: string;
   sourceCodeUrl?: string;
