@@ -46,8 +46,16 @@ export default function Home() {
               />
               <ProjectCard
                 title="Apogee Insurance"
-                description="An insurance quoting and customer service platform built with modern web technologies."
-                techStack={['Next.js', 'React', 'Drizzle ORM', 'PostgreSQL', 'Tailwind CSS']}
+                description={<>
+                  A microserviced insurance platform built with modern web technologies.
+                  <br /><br />
+                  For demonstration purposes, you can use the following administrator credentials:
+                  <br />
+                  <strong>Username:</strong> admin@example.com
+                  <br />
+                  <strong>Password:</strong> password123
+                </>}
+                techStack={['Next.js', 'React', 'Drizzle ORM', 'PostgreSQL', 'Tailwind CSS', 'Microservice']}
                 liveSiteUrl="https://apogee-insurance.vercel.app/"
                 sourceCodeUrl="https://github.com/MitchellUngar14/apogee-insurance"
               />
