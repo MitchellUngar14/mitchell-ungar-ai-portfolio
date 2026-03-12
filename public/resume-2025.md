@@ -65,9 +65,10 @@ May 2015 - March 2022
 * Monolith Infrastructure
 * Microservices
 
-**ReactJs/Typescript ~ 3 years experience**
+**ReactJs/Typescript ~ 4 years experience**
 
 * Helped build the front end to AAA’s new Motorcycle product.
+* Built multiple personal projects including a D&D companion app, digital whiteboard, MTG deck analyzer, and community hub using React 19, Next.js, and TypeScript.
 
 **AWS Microservices ~ 3 years experience**
 
@@ -85,6 +86,8 @@ May 2015 - March 2022
 * Gemini CLI
 * Claude Code CLI
 * Co-Pilot in IDE
+* RAG Pipeline development with ChromaDB vector database
+* Local LLM hosting and inference with Ollama
 
 **Swagger API ~ 2 years experience**
 

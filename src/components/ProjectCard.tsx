@@ -18,25 +18,25 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   imageUrl,
 }) => {
   return (
-    <div className="bg-gray-800 rounded-lg p-6">
-      {imageUrl && <img src={imageUrl} alt={title} className="rounded-md mb-4" />}
-      <h3 className="text-xl font-bold">{title}</h3>
-      <p className="mt-2 text-gray-400">{description}</p>
-      <div className="mt-4">
+    <div className="project-card">
+      {imageUrl && <img src={imageUrl} alt={title} className="rounded-lg mb-4 relative" />}
+      <h3 className="project-card-title">{title}</h3>
+      <p className="project-card-desc">{description}</p>
+      <div className="mt-4 relative">
         {techStack.map((tech, index) => (
-          <span key={index} className="inline-block bg-gray-700 rounded-full px-3 py-1 text-sm font-semibold text-gray-300 mr-2 mb-2">
+          <span key={index} className="tech-pill">
             {tech}
           </span>
         ))}
       </div>
-      <div className="mt-4 flex space-x-4">
+      <div className="mt-4 flex space-x-5 relative">
         {liveSiteUrl && (
-          <a href={liveSiteUrl} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">
+          <a href={liveSiteUrl} target="_blank" rel="noopener noreferrer" className="project-link">
             Live Site
           </a>
         )}
         {sourceCodeUrl && (
-          <a href={sourceCodeUrl} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">
+          <a href={sourceCodeUrl} target="_blank" rel="noopener noreferrer" className="project-link">
             Source Code
           </a>
         )}
