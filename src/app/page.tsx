@@ -66,6 +66,34 @@ export default function Home() {
                 liveSiteUrl="https://bad-advice-for-free.vercel.app/"
                 sourceCodeUrl="https://github.com/MitchellUngar14/BadAdviceForFree"
               />
+              <ProjectCard
+                title="Legion Branch 560"
+                description="A community hub for Royal Canadian Legion Branch 560, serving veterans with an events calendar, member information, restaurant menu, and contact details. Features admin tools for content management and can be installed as a mobile app via PWA."
+                techStack={['React', 'Vite', 'Vercel', 'PWA']}
+                liveSiteUrl="https://legion560.vercel.app/"
+                sourceCodeUrl="https://github.com/MitchellUngar14/Legion"
+              />
+              <ProjectCard
+                title="Whiteboard"
+                description="An interactive digital whiteboard for staying organized with task cards, sticky notes, and images. Features rich text editing, drag-and-drop positioning, resizable cards, a radial context menu, theme switching, and offline support as an installable PWA."
+                techStack={['React 19', 'Vite', 'IndexedDB', 'PWA']}
+                liveSiteUrl="https://muwhiteboard.vercel.app/"
+                sourceCodeUrl="https://github.com/MitchellUngar14/Whiteboard"
+              />
+              <ProjectCard
+                title="MythWeaver"
+                description="A D&D companion app that connects parties in real-time. Features character management, an animated dice roller, world building tools, a combat tracker, an AI Dungeon Master assistant, and live sessions via room codes."
+                techStack={['Next.js', 'TypeScript', 'Drizzle ORM', 'Tailwind CSS']}
+                liveSiteUrl="https://mythweavers.vercel.app/"
+                sourceCodeUrl="https://github.com/MitchellUngar14/MythWeaver"
+              />
+              <ProjectCard
+                title="DeckTutor"
+                description="A Magic: The Gathering deck analysis tool. Import decks from Moxfield, view card images from Scryfall, analyze mana curves and color distributions, detect existing combos, get combo suggestions via EDHREC data, and export decks back to Moxfield."
+                techStack={['Next.js', 'TypeScript', 'Drizzle ORM', 'PostgreSQL', 'FastAPI', 'Tailwind CSS']}
+                liveSiteUrl="https://decktutor.vercel.app/"
+                sourceCodeUrl="https://github.com/MitchellUngar14/DeckTutor"
+              />
             </div>
           </section>
         </main>
