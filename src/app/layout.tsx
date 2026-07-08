@@ -1,23 +1,29 @@
 import type { Metadata } from "next";
-import { Chakra_Petch, Outfit } from "next/font/google";
+import { Chakra_Petch, Outfit, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
 const chakraPetch = Chakra_Petch({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["500", "600", "700"],
 });
 
 const outfit = Outfit({
   variable: "--font-body",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  weight: ["300", "400", "500", "600", "700"],
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-mono",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
   title: "Mitchell Ungar — Engineering & Leadership Portfolio",
   description:
-    "Principal Software Engineer, Manager & Consultant with 12+ years building enterprise systems, leading teams, and driving results.",
+    "Principal engineer & manager — 13+ years shipping enterprise systems, leading teams of nine, and putting AI tooling to real work in insurance and fintech.",
 };
 
 export default function RootLayout({
@@ -28,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${chakraPetch.variable} ${outfit.variable} antialiased`}
+        className={`${chakraPetch.variable} ${outfit.variable} ${jetbrainsMono.variable} antialiased`}
       >
         {children}
       </body>

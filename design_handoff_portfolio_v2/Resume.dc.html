@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; font-family: 'Outfit', 'Helvetica Neue', Arial, sans-serif; }
+  a { color: #33566e; } a:hover { color: #9e5860; }
+  doc-page:not(:defined) { visibility: hidden; }
+  @media print { .no-print { display: none !important; } }
+</style>
+</helmet>
+
+<!-- ══ Screen-only toolbar ══ -->
+<div class="no-print" data-screen-label="Toolbar" style="position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px 14px; padding: 12px clamp(14px, 3vw, 28px); background: rgba(10,17,25,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(143,179,204,0.15)">
+  <a href="Portfolio v2.dc.html" style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; letter-spacing: 0.12em; color: #8fb3cc; text-decoration: none" style-hover="color: #d4949b">← BACK TO PORTFOLIO</a>
+  <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.16em; color: #4a5f72">RESUME — ATS-OPTIMIZED · PRINTS TO US LETTER</span>
+  <button onClick="{{ printPage }}" style="display: inline-flex; align-items: center; gap: 8px; padding: 9px 18px; background: linear-gradient(135deg, #9e5860, #c4727a); color: #fff; font-family: 'Chakra Petch', 'Outfit', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; border: none; border-radius: 6px; cursor: pointer; transition: all 0.3s ease" style-hover="background: linear-gradient(135deg, #c4727a, #e06870); box-shadow: 0 4px 18px rgba(224,104,112,0.3)">Print / Save PDF</button>
+</div>
+
+<div ref="{{ sheetRef }}">
+<x-import component-from-global-scope="doc-page" from="./doc-page.js" size="letter" margin="0.65in" hint-size="100%,1400px" style="font-family: 'Outfit', 'Helvetica Neue', Arial, sans-serif">
+<div style="font-family: 'Outfit', 'Helvetica Neue', Arial, sans-serif">
+
+  <!-- ══ Header ══ -->
+  <div data-screen-label="Resume Header" style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; padding-bottom: 14px; border-bottom: 2px solid #1d2530">
+    <div>
+      <h1 style="margin: 0; font-size: 30px; font-weight: 700; letter-spacing: 0.01em; color: #141a22">Mitchell Ungar</h1>
+      <div style="margin-top: 5px; font-size: 13px; font-weight: 500; letter-spacing: 0.04em; color: #33566e; white-space: nowrap">Principal Software Engineer · Engineering Manager · Consultant</div>
+    </div>
+    <div style="text-align: right; font-size: 11.5px; line-height: 1.7; color: #3d444e">
+      <div>Kingston, Ontario, Canada</div>
+      <div><a href="mailto:mitchell.ungar@gmail.com" style="color: #33566e; text-decoration: none">mitchell.ungar@gmail.com</a> · <a href="https://mitchellungar.vercel.app" target="_blank" rel="noopener noreferrer" style="color: #33566e; text-decoration: none">mitchellungar.vercel.app</a></div>
+      <div><a href="https://www.linkedin.com/in/mitchell-ungar-552879168/" target="_blank" rel="noopener noreferrer" style="color: #33566e; text-decoration: none">linkedin.com/in/mitchell-ungar-552879168</a> · <a href="https://github.com/MitchellUngar14" target="_blank" rel="noopener noreferrer" style="color: #33566e; text-decoration: none">github.com/MitchellUngar14</a></div>
+    </div>
+  </div>
+
+  <!-- ══ Summary ══ -->
+  <h2 style="margin: 18px 0 6px 0; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #33566e">Summary</h2>
+  <p style="margin: 0; font-size: 12.5px; line-height: 1.62; color: #2a2f37">Principal Software Engineer and Engineering Manager with 13+ years of experience designing, building, and modernizing enterprise software across insurance, employee benefits, and fintech. Deep foundation in Java, Spring, SQL, and CI/CD automation built over 8 years at Benefits By Design; expanded at Levio into cloud-native AWS microservices, React/TypeScript front ends, and AI-assisted software development (RAG pipelines, LLM tooling, prompt engineering) while consulting for major North American insurers including Liberty Mutual and AAA/CSAA. Proven engineering leadership: managing a cross-functional team of 9, saving $100K+ through legacy system modernization, and delivering quality through test-driven development, rigorous standards, and continuous improvement.</p>
+
+  <!-- ══ Core competencies (ATS keyword block) ══ -->
+  <h2 style="margin: 16px 0 6px 0; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #33566e">Core Competencies</h2>
+  <p style="margin: 0; font-size: 11.5px; line-height: 1.7; color: #3d444e">Software Architecture · Microservices Architecture · Cloud Computing (AWS) · Full-Stack Development · Java · Spring Boot · React · TypeScript · Next.js · REST APIs · SQL &amp; Database Migration · CI/CD Automation · DevOps · Test-Driven Development (TDD) · Agile · Scrum · SAFe · Generative AI · LLM Integration · RAG Pipelines · Prompt Engineering · Engineering Management · Team Leadership · Mentoring &amp; Training · Performance Management · Vendor &amp; Stakeholder Management · Legacy System Modernization · Payments Integration (Stripe) · Multi-Tenant SaaS Architecture · End-to-End Testing (Playwright, Cypress) · Apache Kafka</p>
+
+  <!-- ══ Experience ══ -->
+  <h2 style="margin: 18px 0 4px 0; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #33566e">Professional Experience</h2>
+
+  <div style="margin-top: 8px">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px">
+      <div style="font-size: 14px; font-weight: 600; color: #141a22">Freelance Full Stack Developer <span style="font-weight: 400; color: #5a6170">— cEDH Canada (cedhcanada.ca)</span></div>
+      <div style="font-size: 11.5px; font-weight: 500; letter-spacing: 0.04em; color: #5a6170; white-space: nowrap">2025 — Present</div>
+    </div>
+    <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 12.5px; line-height: 1.6; color: #2a2f37">
+      <li style="margin-bottom: 3px">Sole developer — designed, built, and maintain a production full-stack tournament platform (Next.js 16, React 19, TypeScript, PostgreSQL/Drizzle ORM, Tailwind CSS v4) serving Canada's competitive Commander community, working directly with the business owner — event ticketing, Swiss tournament management with live round timers, decklist tracking, season leaderboards, and metagame analytics.</li>
+      <li style="margin-bottom: 3px">Engineered a pluggable tournament scoring engine supporting five ranking systems (including Elo and Japanese/Hareruya) behind a common interface, plus a 4-player Swiss pod-pairing algorithm handling odd remainders, byes, drops, and re-pairing.</li>
+      <li style="margin-bottom: 3px">Implemented end-to-end payments — cart → Stripe Checkout → webhook-driven order fulfillment — with tax configuration, subscription tiers, and payout report exports.</li>
+      <li style="margin-bottom: 3px">Delivered multi-tenant store "league" mini-sites with per-store branding via CSS custom properties, role-based authentication (Auth.js v5) enforced in middleware, judge/co-organizer permissions, audit logging, and web push notifications.</li>
+      <li>Established CI/CD on GitHub Actions → Vercel with per-branch preview deployments, Vitest unit tests behind an enforced 80% coverage gate, and four timing-balanced Playwright end-to-end shards.</li>
+    </ul>
+  </div>
+
+  <div style="margin-top: 14px">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px">
+      <div style="font-size: 14px; font-weight: 600; color: #141a22">Principal Software Engineer <span style="font-weight: 400; color: #5a6170">— Levio, contract with Liberty Mutual</span></div>
+      <div style="font-size: 11.5px; font-weight: 500; letter-spacing: 0.04em; color: #5a6170; white-space: nowrap">April 2024 — Present</div>
+    </div>
+    <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 12.5px; line-height: 1.6; color: #2a2f37">
+      <li style="margin-bottom: 3px">Lead the design and migration of enterprise insurance rating systems from Ratabase to Earnix, partnering with client architecture and development teams.</li>
+      <li style="margin-bottom: 3px">Provisioned and configured Windows Server environments to host internal web UI applications.</li>
+      <li>Coordinate multiple vendors and support client needs to ensure product stability and continuity of service.</li>
+    </ul>
+  </div>
+
+  <div style="margin-top: 14px">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px">
+      <div style="font-size: 14px; font-weight: 600; color: #141a22">Engineering Manager <span style="font-weight: 400; color: #5a6170">— Levio</span></div>
+      <div style="font-size: 11.5px; font-weight: 500; letter-spacing: 0.04em; color: #5a6170; white-space: nowrap">April 2023 — Present</div>
+    </div>
+    <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 12.5px; line-height: 1.6; color: #2a2f37">
+      <li style="margin-bottom: 3px">Manage a cross-functional team of 9 spanning QA engineers, software developers, and business analysts.</li>
+      <li style="margin-bottom: 3px">Build individualized career roadmaps and coaching plans that develop team members toward their full potential.</li>
+      <li>Conduct performance evaluations, adjust compensation, and make strategic staffing decisions — including terminations when necessary.</li>
+    </ul>
+  </div>
+
+  <div style="margin-top: 14px">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px">
+      <div style="font-size: 14px; font-weight: 600; color: #141a22">Senior Full Stack Developer Consultant <span style="font-weight: 400; color: #5a6170">— Levio, contract with AAA / CSAA</span></div>
+      <div style="font-size: 11.5px; font-weight: 500; letter-spacing: 0.04em; color: #5a6170; white-space: nowrap">April 2022 — April 2024</div>
+    </div>
+    <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 12.5px; line-height: 1.6; color: #2a2f37">
+      <li style="margin-bottom: 3px">Built AAA's new Motorcycle/Auto insurance product hand-in-hand with client development teams using React, TypeScript, and Java microservices.</li>
+      <li style="margin-bottom: 3px">Owned the reporting microservice end-to-end; designed and built its AWS architecture with Lambda, API Gateway, DynamoDB, CloudWatch, and CloudFormation.</li>
+      <li style="margin-bottom: 3px">Accelerated onboarding by training incoming teams on code flow and configuration-driven development; built productivity tooling including Postman collections and custom Bash scripts.</li>
+      <li>Trained new QA staff in business practices and technical skills such as data mocking and request/response analysis.</li>
+    </ul>
+  </div>
+
+  <div style="margin-top: 14px">
+    <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px">
+      <div style="font-size: 14px; font-weight: 600; color: #141a22">Senior Java Developer <span style="font-weight: 400; color: #5a6170">— Benefits By Design, Kingston, ON</span></div>
+      <div style="font-size: 11.5px; font-weight: 500; letter-spacing: 0.04em; color: #5a6170; white-space: nowrap">May 2015 — March 2022</div>
+    </div>
+    <ul style="margin: 6px 0 0 0; padding-left: 18px; font-size: 12.5px; line-height: 1.6; color: #2a2f37">
+      <li style="margin-bottom: 3px">Saved $100,000+ in premium costs by modernizing legacy code with newer, better engineering practices.</li>
+      <li style="margin-bottom: 3px">Led the database migration from Microsoft SQL Server 2008 to PostgreSQL, eliminating server licensing fees.</li>
+      <li style="margin-bottom: 3px">Converted all reporting from JReport to Jaspersoft within a Spring-supported framework, reducing costs and modernizing the reporting stack.</li>
+      <li style="margin-bottom: 3px">Built multilingual reporting support, enabling company operations in Quebec.</li>
+      <li style="margin-bottom: 3px">Delivered project goals within timeframe, scope, and budget while exceeding expected quality; designed development team standards and promoted engineering best practices.</li>
+      <li style="margin-bottom: 3px">Led multiple projects including outsourced developer teams; collaborated with outside companies to build quality products and services.</li>
+      <li>Trained two student developers into independent professionals; interviewed developer candidates to provide technical insight to non-developer managers.</li>
+    </ul>
+  </div>
+
+  <!-- ══ Technical skills ══ -->
+  <h2 style="margin: 18px 0 6px 0; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #33566e">Technical Skills</h2>
+  <div style="display: flex; flex-direction: column; gap: 5px; font-size: 12px; line-height: 1.6; color: #2a2f37">
+    <div><span style="font-weight: 600; color: #141a22">Languages &amp; Frameworks:</span> Java EE — Spring MVC, Spring Boot, Spring Data; monolith &amp; microservice architectures (12+ yrs) · React / TypeScript (5 yrs) · Next.js (2 yrs) · Tailwind CSS. Personal projects include a D&amp;D companion app, digital whiteboard, MTG deck analyzer, and community hub built with React 19, Next.js, and TypeScript.</div>
+    <div><span style="font-weight: 600; color: #141a22">Cloud &amp; Infrastructure:</span> AWS — Lambda, API Gateway, DynamoDB, CloudWatch, CloudFormation (3 yrs) · Vercel — branch preview &amp; production deployments · Windows Server setup for internal web applications (1 yr) · Apache Kafka (4 yrs)</div>
+    <div><span style="font-weight: 600; color: #141a22">AI &amp; Emerging Tech:</span> Prompt engineering (2 yrs) · Claude Code CLI &amp; Gemini CLI (2 yrs) · GitHub Copilot in IDE (2 yrs) · RAG pipeline development with ChromaDB vector database (1 yr) · Local LLM hosting and inference with Ollama (1 yr)</div>
+    <div><span style="font-weight: 600; color: #141a22">Integrations &amp; Payments:</span> Stripe (Checkout, webhooks, subscriptions) · Auth.js / NextAuth v5 · Zod validation · Resend transactional email · Web Push · Scryfall &amp; Moxfield APIs · ExcelJS report exports</div>
+    <div><span style="font-weight: 600; color: #141a22">Databases &amp; Migration:</span> PostgreSQL (4 yrs) · Microsoft SQL Server (7 yrs) · Oracle SQL (3 yrs) · Flyway (5 yrs) · Liquibase (2 yrs)</div>
+    <div><span style="font-weight: 600; color: #141a22">Testing &amp; Quality:</span> Test-Driven Development (7 yrs) · 10 yrs of testing across Mockito, JUnit 4/5, Jest, Mocha, Selenium, and Citrus · Cypress (1 yr) · WireMock dynamic &amp; static API mocking (2 yrs) · Vitest + Testing Library with enforced coverage gates · Playwright E2E with sharded CI runs</div>
+    <div><span style="font-weight: 600; color: #141a22">CI/CD &amp; Tooling:</span> Jenkins (11 yrs) · GitHub Actions (2 yrs) · Bamboo (1 yr) · Git / GitHub (11+ yrs) · Maven (9+ yrs) · Gradle (1 yr) · JIRA (10+ yrs) · Bitbucket (2 yrs) · Swagger / OpenAPI (2 yrs)</div>
+    <div><span style="font-weight: 600; color: #141a22">Reporting:</span> Jaspersoft (4 yrs) · JReport (4 yrs)</div>
+    <div><span style="font-weight: 600; color: #141a22">Methodologies &amp; Leadership:</span> Agile (11 yrs) · SAFe (2 yrs) · Kanban (2 yrs) · Engineering management (3 yrs) · Developer training (7 yrs) · Project leadership (12+ yrs)</div>
+  </div>
+
+  <!-- ══ Education ══ -->
+  <h2 style="margin: 18px 0 6px 0; font-size: 13px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #33566e">Education &amp; Certifications</h2>
+  <div style="display: flex; flex-direction: column; gap: 6px; font-size: 12.5px; line-height: 1.55; color: #2a2f37">
+    <div style="display: flex; justify-content: space-between; gap: 16px"><span><span style="font-weight: 600; color: #141a22">St. Lawrence College</span>, Kingston, ON — Advanced Diploma, Computer Programmer Analyst</span><span style="color: #5a6170; white-space: nowrap">April 2016</span></div>
+    <div style="display: flex; justify-content: space-between; gap: 16px"><span><span style="font-weight: 600; color: #141a22">University of Alberta</span> — Software Architecture, <a href="https://www.coursera.org/account/accomplishments/verify/5949IR2PHXGM" target="_blank" rel="noopener noreferrer" style="color: #33566e">Certification</a></span><span style="color: #5a6170; white-space: nowrap">December 2024</span></div>
+    <div style="display: flex; justify-content: space-between; gap: 16px"><span><span style="font-weight: 600; color: #141a22">Udemy</span> — The Complete Guide to Becoming a Software Architect, <a href="https://www.udemy.com/certificate/UC-d01d89bc-2ef2-41c1-acb9-04b0c25f9860/" target="_blank" rel="noopener noreferrer" style="color: #33566e">Certification</a></span><span style="color: #5a6170; white-space: nowrap">December 2024</span></div>
+    <div style="display: flex; justify-content: space-between; gap: 16px"><span><span style="font-weight: 600; color: #141a22">Scrum Alliance</span> — Certified Scrum Developer (CSD)</span><span style="color: #5a6170; white-space: nowrap">May 2022</span></div>
+  </div>
+
+</div>
+</x-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.sheetRef = React.createRef();
+  }
+
+  componentDidMount() {
+    // Scale the Letter-width sheet down to fit narrow screens
+    this.fitSheet = () => {
+      const el = this.sheetRef.current;
+      if (!el) return;
+      const w = window.innerWidth;
+      el.style.zoom = w < 900 ? String(Math.max(0.4, (w - 16) / 868)) : '';
+    };
+    window.addEventListener('resize', this.fitSheet);
+    this.fitSheet();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.fitSheet);
+  }
+
+  renderVals() {
+    return {
+      sheetRef: this.sheetRef,
+      printPage: () => window.print(),
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,48 +1,53 @@
-import React from 'react';
+import type { CSSProperties } from "react";
 
-interface ProjectCardProps {
+export interface Project {
   title: string;
-  description: string | React.ReactNode;
-  techStack: string[];
-  liveSiteUrl?: string;
-  sourceCodeUrl?: string;
-  imageUrl?: string;
+  description: string;
+  stack: string;
+  liveUrl: string;
+  codeUrl: string;
+  /** Optional demo-credentials line shown above the stack */
+  demo?: string;
+  revealDelay?: number;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({
-  title,
-  description,
-  techStack,
-  liveSiteUrl,
-  sourceCodeUrl,
-  imageUrl,
-}) => {
+export default function ProjectCard({ project }: { project: Project }) {
+  const { title, description, stack, liveUrl, codeUrl, demo, revealDelay } =
+    project;
+
   return (
-    <div className="project-card">
-      {imageUrl && <img src={imageUrl} alt={title} className="rounded-lg mb-4 relative" />}
-      <h3 className="project-card-title">{title}</h3>
-      <p className="project-card-desc">{description}</p>
-      <div className="mt-4 relative">
-        {techStack.map((tech, index) => (
-          <span key={index} className="tech-pill">
-            {tech}
-          </span>
-        ))}
-      </div>
-      <div className="mt-4 flex space-x-5 relative">
-        {liveSiteUrl && (
-          <a href={liveSiteUrl} target="_blank" rel="noopener noreferrer" className="project-link">
-            Live Site
+    <div
+      className="proj-card reveal"
+      style={
+        revealDelay
+          ? ({ "--rd": `${revealDelay}ms` } as CSSProperties)
+          : undefined
+      }
+    >
+      <div className="proj-head">
+        <div className="proj-title">{title}</div>
+        <div className="proj-links">
+          <a
+            href={liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="proj-link proj-link--live"
+          >
+            LIVE ↗
           </a>
-        )}
-        {sourceCodeUrl && (
-          <a href={sourceCodeUrl} target="_blank" rel="noopener noreferrer" className="project-link">
-            Source Code
+          <a
+            href={codeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="proj-link proj-link--code"
+          >
+            CODE ↗
           </a>
-        )}
+        </div>
       </div>
+      <p className="proj-desc">{description}</p>
+      {demo && <div className="proj-demo">{demo}</div>}
+      <div className="proj-stack">{stack}</div>
     </div>
   );
-};
-
-export default ProjectCard;
+}
